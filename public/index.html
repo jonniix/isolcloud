@@ -14,7 +14,7 @@
         <img src="images/logo%20edil%202024.png" alt="Logo Edil 2024" class="logo-small">
         <img src="images/logo%20solcloud2.jpg" alt="Logo Solcloud" class="logo-main">
     </div>
-    <button class="menu-button" onclick="toggleMenu()">
+    <button class="menu-button" id="menuButton">
         <div></div>
         <div></div>
         <div></div>
@@ -26,7 +26,7 @@
             <a href="cloud.html">Acquista kW</a>
             <a href="install.html">Richiesta Installazione</a>
         </div>
-        <button class="login-button" onclick="handleLoginLogout()">Login</button>
+        <button class="login-button" id="loginButton">Login</button>
     </nav>
     <section id="home">
         <div class="container">
@@ -57,7 +57,7 @@
                         <p id="historical-production">Produzione storica: </p>
                         <p id="historical-production-chf"></p>
                     </div>
-                    <button id="toggle-data-btn" class="switch-button" onclick="toggleData()">Visualizza Dati Precedenti</button>
+                    <button id="toggleDataButton" class="switch-button">Visualizza Dati Precedenti</button>
                     <p id="chart-date" style="color: white; text-align: center; margin-top: 10px;"></p>
                     <div id="chart-container" class="chart-small">
                         <div class="chart-box">
@@ -67,7 +67,7 @@
                             <canvas id="chfChart"></canvas>
                         </div>
                     </div>
-                    <button class="toggle-size-button switch-button" onclick="toggleChartSize()">Apri</button>
+                    <button id="toggleSizeButton" class="switch-button">Apri</button>
                 </li>
             </ul>
         </div>

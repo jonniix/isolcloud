@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(() => {
         selectSite(siteId, apiKey);
     }, 900000); // 900000 ms = 15 minuti
+
+    document.getElementById('menuButton').addEventListener('click', toggleMenu);
+    document.getElementById('loginButton').addEventListener('click', handleLoginLogout);
+    document.getElementById('toggleDataButton').addEventListener('click', toggleData);
+    document.getElementById('toggleSizeButton').addEventListener('click', toggleChartSize);
 });
 
 let chartKWh;
@@ -33,7 +38,7 @@ function toggleMenu() {
 
 function toggleData() {
     showingYesterday = !showingYesterday;
-    const button = document.getElementById('toggle-data-btn');
+    const button = document.getElementById('toggleDataButton');
     button.textContent = showingYesterday ? 'Visualizza Dati Attuali' : 'Visualizza Dati Precedenti';
     selectSite('1634115', 'HLSQJVEUPT2CQ07D2ENLCV0GD6D434PL');
 }
@@ -344,11 +349,6 @@ function updateLoginLogoutButton(loggedIn) {
     const button = document.querySelector('.login-button');
     button.textContent = loggedIn ? 'Logout' : 'Login';
 }
-
-
-
-
-
 
 
 
